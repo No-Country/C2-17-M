@@ -1,0 +1,40 @@
+$mainDarkBackgroundColour: #1b1e28;
+$mainDarkContainerColour: #28293d;
+$mainLightColour: #DCDDDF;
+
+
+.topBarContainer{
+    grid-area: topBar;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    padding: 1rem;
+    & input{
+        width: 15rem;
+        height: 1.5rem;
+    }
+    &__title{
+        font-weight: 600;
+    }
+    &__list{
+        display: flex;
+        flex-flow: wrap row;
+        padding-right: 2rem;
+        width: 10rem;
+        justify-content: space-between;
+        & li{
+            cursor: pointer;
+            transition: .5s;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        
+        & img{
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}

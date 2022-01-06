@@ -1,0 +1,12 @@
+$mainDarkContainerColour: #28293d;
+
+
+.sidebarContainer{
+    display: grid;
+    grid-area: sidebar;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background: rgb(219,78,208);
+    background: linear-gradient(180deg, rgba(219,78,208,1) 0%, rgba(207,82,222,1) 35%, rgba(190,83,238,1) 100%);
+    }
