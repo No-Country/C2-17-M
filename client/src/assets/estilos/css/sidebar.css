@@ -1,10 +1,26 @@
 .sidebarContainer {
   display: grid;
   grid-area: sidebar;
+  grid-template-rows: 1fr 8fr;
+  grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
+  padding: 1rem;
   background: #db4ed0;
   background: linear-gradient(180deg, #db4ed0 0%, #cf52de 35%, #be53ee 100%);
+}
+
+.sidebarContainer__top {
+  display: grid;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.sidebarContainer__body {
+  display: grid;
+  justify-content: center;
+  grid-template: 1fr;
 }
 /*# sourceMappingURL=sidebar.css.map */

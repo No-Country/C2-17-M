@@ -1,22 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 .layout {
   display: grid;
-  grid-template-areas: "topBar topBar topBar topBar topBar" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard";
-  min-height: 100vh;
+  grid-template-areas: "topBar topBar topBar topBar topBar topBar" "sidebar dashboard dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard dashboard";
+  min-height: 98vh;
   grid-gap: 1rem;
-  width: 100%;
+  overflow-x: hidden;
+  padding: 1vh;
   transition: 1s;
   color: #f3f3f3;
   background-color: #1b1e28;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
 }
 
 .layout__isDark {
   display: grid;
-  grid-template-areas: "topBar topBar topBar topBar topBar" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard";
-  min-height: 100vh;
+  grid-template-areas: "topBar topBar topBar topBar topBar topBar" "sidebar dashboard dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard dashboard";
+  min-height: 98vh;
   grid-gap: 1rem;
-  width: 100%;
+  overflow-x: hidden;
+  padding: 1vh;
   transition: 1s;
   background-color: #f3f3f3;
   color: #1b1e28;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
 }
 /*# sourceMappingURL=layout.css.map */
