@@ -20,6 +20,10 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -137,7 +141,6 @@ table {
   grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
-  border-radius: 1rem;
   padding: 1rem;
   background: #db4ed0;
   background: linear-gradient(180deg, #db4ed0 0%, #cf52de 35%, #be53ee 100%);
@@ -247,5 +250,82 @@ table {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.loginContainer {
+  display: grid;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #1b1e28;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.loginContainer h1 {
+  color: #db4ed0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.loginContainer__form {
+  display: grid;
+  justify-content: center;
+  grid-gap: 1rem;
+  border-radius: 3rem;
+  padding: 1rem;
+  border: 60px solid transparent;
+  border-image: linear-gradient(to bottom, #db4ed0 0%, #be53ee 100%) 1;
+}
+
+.loginContainer__form input {
+  border-radius: 1vh;
+  border: none;
+  height: 2rem;
+}
+
+.loginContainer__form--error {
+  display: grid;
+  justify-content: center;
+  color: red;
+  font-weight: 700;
+}
+
+.loginContainer__form--success {
+  display: grid;
+  justify-content: center;
+  color: green;
+  font-weight: 700;
+}
+
+.loginContainer__form--button {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  border: none;
+  text-transform: uppercase;
+  background-color: #be53ee;
+  height: 2rem;
+  border-radius: 1vh;
+  width: 50%;
+  cursor: pointer;
+  font-weight: 700;
+  opacity: 0.75;
+  margin: 1vh auto 1vh auto;
+  transition: 1s;
+}
+
+.loginContainer__form--button:hover {
+  opacity: 1;
+  filter: saturate(1.5);
+}
+
+.loginContainer__form--button#registerDisabled {
+  display: grid;
+  cursor: not-allowed;
+  opacity: 0.5;
+  filter: grayscale(2);
 }
 /*# sourceMappingURL=estilos.css.map */

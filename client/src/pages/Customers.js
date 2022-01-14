@@ -2,7 +2,7 @@ const Customers = () => {
     return (  
 
         <section className="customersContainer">
-
+            
         </section>
 
     );
