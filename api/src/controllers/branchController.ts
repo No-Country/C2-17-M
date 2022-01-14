@@ -1,4 +1,4 @@
-import { Request, Response} from 'express';
+import { Request, Response } from 'express';
 import pool from '../database';
 
 class BranchController{
@@ -8,4 +8,3 @@ class BranchController{
     } 
 }
 export const branchController = new BranchController();
-
