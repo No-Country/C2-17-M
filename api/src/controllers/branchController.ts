@@ -16,5 +16,15 @@ class BranchController{
         res.status(400).json({text: 'Usuario sin permisos en todas las sucursales'});
         
     }
+
+    public async ingresosTodos(req: Request,res: Response):Promise<any>{        
+        const ingresos = await pool.query('CALL ingresosTodos()'); 
+        alert('ahhhhhhhhhhh');
+        if (ingresos.length > 1){
+            return res.json(ingresos[0]);
+        }                    
+        res.status(400).json({text: 'Sin Ingresos'});
+        
+    }
 }
 export const branchController = new BranchController();
