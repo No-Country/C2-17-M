@@ -16,12 +16,6 @@ class UserController {
         res.status(400).json({text: 'Usuario inexistente'});
     }
 
-    public async userBranch(req: Request,res: Response):Promise<any>{
-        const userId=req.params.userId;
-        const branchId=req.params.branchId;
-        console.log(userId+' '+branchId);
-    }
-
     public create(req: Request,res: Response){
         console.log(req.body);
         res.json({text: 'Creando Usuarios'});

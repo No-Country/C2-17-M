@@ -10,7 +10,7 @@ class BranchRoutes{
 
     config():void{
         this.router.get('/',branchController.list);
-        
+        this.router.get('/:id',branchController.userBranch);
     }
 } 
 

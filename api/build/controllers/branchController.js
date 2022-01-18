@@ -21,5 +21,15 @@ class BranchController {
             return res.json(branches[0]);
         });
     }
+    userBranch(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const id = req.params.id;
+            const branches = yield database_1.default.query('CALL userxbranch(?)', [id]);
+            if (branches.length > 1) {
+                return res.json(branches[0]);
+            }
+            res.status(400).json({ text: 'Usuario sin permisos en todas las sucursales' });
+        });
+    }
 }
 exports.branchController = new BranchController();

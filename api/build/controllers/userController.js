@@ -31,13 +31,6 @@ class UserController {
             res.status(400).json({ text: 'Usuario inexistente' });
         });
     }
-    userBranch(req, res) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const userId = req.params.userId;
-            const branchId = req.params.branchId;
-            console.log(userId + ' ' + branchId);
-        });
-    }
     create(req, res) {
         console.log(req.body);
         res.json({ text: 'Creando Usuarios' });

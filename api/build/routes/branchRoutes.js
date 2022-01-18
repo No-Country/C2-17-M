@@ -9,6 +9,7 @@ class BranchRoutes {
     }
     config() {
         this.router.get('/', branchController_1.branchController.list);
+        this.router.get('/:id', branchController_1.branchController.userBranch);
     }
 }
 const usersRoutes = new BranchRoutes();
