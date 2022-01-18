@@ -2,18 +2,24 @@ import { Request, Response} from 'express';
 import pool from '../database';
 
 class UserController {
-    public list  (req: Request,res: Response){
-        pool.query('call  getAllUsers()');
-        res.send('listar todos los usuarios');
+    public async list  (req: Request,res: Response):Promise<any>{
+        const list = await pool.query('call  getAllUsers()');
+        return res.json(list[0]);
     } 
 
     public async getOne(req: Request,res: Response):Promise<any>{
         const {id} = req.params;
         const user = await pool.query('CALL getUser(?)',[id]); 
-        if (user.length > 2){
+        if (user.length > 1){
             return res.json(user[0]);
         }                    
         res.status(400).json({text: 'Usuario inexistente'});
+    }
+
+    public async userBranch(req: Request,res: Response):Promise<any>{
+        const userId=req.params.userId;
+        const branchId=req.params.branchId;
+        console.log(userId+' '+branchId);
     }
 
     public create(req: Request,res: Response){

@@ -16,17 +16,26 @@ exports.userController = void 0;
 const database_1 = __importDefault(require("../database"));
 class UserController {
     list(req, res) {
-        database_1.default.query('call  getAllUsers()');
-        res.send('listar todos los usuarios');
+        return __awaiter(this, void 0, void 0, function* () {
+            const list = yield database_1.default.query('call  getAllUsers()');
+            return res.json(list[0]);
+        });
     }
     getOne(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
             const user = yield database_1.default.query('CALL getUser(?)', [id]);
-            if (user.length > 2) {
+            if (user.length > 1) {
                 return res.json(user[0]);
             }
             res.status(400).json({ text: 'Usuario inexistente' });
+        });
+    }
+    userBranch(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const userId = req.params.userId;
+            const branchId = req.params.branchId;
+            console.log(userId + ' ' + branchId);
         });
     }
     create(req, res) {

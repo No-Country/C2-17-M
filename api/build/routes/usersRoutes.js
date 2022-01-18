@@ -13,6 +13,7 @@ class UsersRoutes {
         this.router.post('/', userController_1.userController.create);
         this.router.delete('/:id', userController_1.userController.delete);
         this.router.put('/:id', userController_1.userController.update);
+        this.router.get('/users/:userId/branch/:branchId', userController_1.userController.userBranch);
     }
 }
 const usersRoutes = new UsersRoutes();

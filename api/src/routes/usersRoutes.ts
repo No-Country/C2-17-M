@@ -14,6 +14,7 @@ class UsersRoutes {
         this.router.post('/', userController.create); 
         this.router.delete('/:id', userController.delete);
         this.router.put('/:id', userController.update);
+        this.router.get('/users/:userId/branch/:branchId',userController.userBranch);
     }
 }
 
