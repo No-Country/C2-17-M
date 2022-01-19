@@ -1,0 +1,22 @@
+.layout {
+  display: grid;
+  grid-template-areas: "topBar topBar topBar topBar topBar" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard";
+  min-height: 100vh;
+  grid-gap: 1rem;
+  width: 100%;
+  transition: 1s;
+  color: #f3f3f3;
+  background-color: #1b1e28;
+}
+
+.layout__isDark {
+  display: grid;
+  grid-template-areas: "topBar topBar topBar topBar topBar" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard" "sidebar dashboard dashboard dashboard dashboard";
+  min-height: 100vh;
+  grid-gap: 1rem;
+  width: 100%;
+  transition: 1s;
+  background-color: #f3f3f3;
+  color: #1b1e28;
+}
+/*# sourceMappingURL=layout.css.map */

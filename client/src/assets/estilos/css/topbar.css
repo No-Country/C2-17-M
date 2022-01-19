@@ -1,0 +1,41 @@
+.topBarContainer {
+  grid-area: topBar;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.topBarContainer input {
+  width: 15rem;
+  height: 1.5rem;
+}
+
+.topBarContainer__title {
+  font-weight: 600;
+}
+
+.topBarContainer__list {
+  display: flex;
+  flex-flow: wrap row;
+  padding-right: 2rem;
+  width: 10rem;
+  justify-content: space-between;
+}
+
+.topBarContainer__list li {
+  cursor: pointer;
+  transition: .5s;
+}
+
+.topBarContainer__list li:hover {
+  transform: scale(1.1);
+}
+
+.topBarContainer__list img {
+  width: 2rem;
+  height: 2rem;
+}
+/*# sourceMappingURL=topbar.css.map */
