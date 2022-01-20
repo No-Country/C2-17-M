@@ -9,6 +9,10 @@ class IngresosController{
 
     public async ingresosxFecha  (req: Request,res: Response):Promise<any>{
         const {id,fechaInicio,fechaFin}=req.body;
+        //const id = req.params.id;
+       // const fechaInicio = req.params.fechaInicio;
+       // const fechaFin = req.params.fechaFin;
+        console.log(id+ '' + fechaInicio);
         const ingresos = await pool.query('call  ingresosxFecha(?,?,?)',[id,fechaInicio,fechaFin]);
         return res.json(ingresos[0]);
     } 
