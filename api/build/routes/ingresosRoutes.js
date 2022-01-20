@@ -9,7 +9,8 @@ class IngresosRoutes {
     }
     config() {
         this.router.get('/', ingresosController_1.ingresosController.todos);
-        this.router.post('/', ingresosController_1.ingresosController.ingresosxFecha);
+        this.router.post('/fecha', ingresosController_1.ingresosController.ingresosxFecha);
+        this.router.post('/concepto', ingresosController_1.ingresosController.ingresosxConcepto);
     }
 }
 const ingresosRoutes = new IngresosRoutes();

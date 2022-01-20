@@ -24,11 +24,15 @@ class IngresosController {
     ingresosxFecha(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id, fechaInicio, fechaFin } = req.body;
-            //const id = req.params.id;
-            // const fechaInicio = req.params.fechaInicio;
-            // const fechaFin = req.params.fechaFin;
-            console.log(id + '' + fechaInicio);
+            console.log(id + ' ' + fechaInicio + ' ' + fechaFin);
             const ingresos = yield database_1.default.query('call  ingresosxFecha(?,?,?)', [id, fechaInicio, fechaFin]);
+            return res.json(ingresos[0]);
+        });
+    }
+    ingresosxConcepto(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { id, fechaInicio, fechaFin } = req.body;
+            const ingresos = yield database_1.default.query('call  ingresosxConcepto(?)', [id]);
             return res.json(ingresos[0]);
         });
     }
