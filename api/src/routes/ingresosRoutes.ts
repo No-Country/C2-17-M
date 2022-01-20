@@ -9,6 +9,7 @@ class IngresosRoutes{
 
     config():void{
         this.router.get('/',ingresosController.todos);
+        this.router.post('/', ingresosController.ingresosxFecha);
     }
 }
 

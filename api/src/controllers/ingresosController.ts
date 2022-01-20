@@ -6,6 +6,12 @@ class IngresosController{
         const todos = await pool.query('call  ingresosTodos()');
         return res.json(todos[0]);
     } 
+
+    public async ingresosxFecha  (req: Request,res: Response):Promise<any>{
+        const {id,fechaInicio,fechaFin}=req.body;
+        const ingresos = await pool.query('call  ingresosxFecha(?,?,?)',[id,fechaInicio,fechaFin]);
+        return res.json(ingresos[0]);
+    } 
 }
 
 export const ingresosController = new IngresosController();

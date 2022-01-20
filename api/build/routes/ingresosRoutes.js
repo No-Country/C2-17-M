@@ -9,6 +9,7 @@ class IngresosRoutes {
     }
     config() {
         this.router.get('/', ingresosController_1.ingresosController.todos);
+        this.router.post('/', ingresosController_1.ingresosController.ingresosxFecha);
     }
 }
 const ingresosRoutes = new IngresosRoutes();

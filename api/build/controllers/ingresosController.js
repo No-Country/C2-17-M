@@ -21,5 +21,12 @@ class IngresosController {
             return res.json(todos[0]);
         });
     }
+    ingresosxFecha(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { id, fechaInicio, fechaFin } = req.body;
+            const ingresos = yield database_1.default.query('call  ingresosxFecha(?,?,?)', [id, fechaInicio, fechaFin]);
+            return res.json(ingresos[0]);
+        });
+    }
 }
 exports.ingresosController = new IngresosController();
