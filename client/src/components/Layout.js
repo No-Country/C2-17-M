@@ -11,7 +11,6 @@ const Layout = () => {
 
 
     return (
-
         <section className={toggle? "layout" : "layout__isDark"}>
             <TopBar/>
             <Sidebar/>

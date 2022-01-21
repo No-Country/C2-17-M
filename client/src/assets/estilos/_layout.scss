@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+$mainDarkBackgroundColour: #1b1e28;
+$mainDarkContainerColour: #28293d;
+$mainLightBackgroundColour: #f3f3f3;
+$mainLightContainerColour: #ffffff;
+
+.layout {
+    display: grid;
+    grid-template-areas:
+        "topBar topBar topBar topBar topBar topBar"
+        "sidebar dashboard dashboard dashboard dashboard dashboard"
+        "sidebar dashboard dashboard dashboard dashboard dashboard"
+        "sidebar dashboard dashboard dashboard dashboard dashboard"
+        "sidebar dashboard dashboard dashboard dashboard dashboard"
+        "sidebar dashboard dashboard dashboard dashboard dashboard"
+        "sidebar dashboard dashboard dashboard dashboard dashboard"
+        "sidebar dashboard dashboard dashboard dashboard dashboard";
+    min-height: 98vh;
+    grid-gap: 1rem;
+    overflow-x: hidden;
+    padding: 1vh;
+    transition: 1s;
+    color: $mainLightBackgroundColour;
+    background-color: $mainDarkBackgroundColour;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    &__isDark {
+        display: grid;
+        grid-template-areas:
+            "topBar topBar topBar topBar topBar topBar"
+            "sidebar dashboard dashboard dashboard dashboard dashboard"
+            "sidebar dashboard dashboard dashboard dashboard dashboard"
+            "sidebar dashboard dashboard dashboard dashboard dashboard"
+            "sidebar dashboard dashboard dashboard dashboard dashboard"
+            "sidebar dashboard dashboard dashboard dashboard dashboard"
+            "sidebar dashboard dashboard dashboard dashboard dashboard"
+            "sidebar dashboard dashboard dashboard dashboard dashboard";
+        min-height: 98vh;
+        grid-gap: 1rem;
+        overflow-x: hidden;
+        padding: 1vh;
+        transition: 1s;
+        background-color: $mainLightBackgroundColour;
+        color: $mainDarkBackgroundColour;
+        font-family: "Roboto", sans-serif;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .layout,
+    .layout__isDark {
+        grid-template-areas:
+            "topBar topBar topBar topBar topBar topBar"
+            "sidebar sidebar sidebar sidebar sidebar sidebar"
+            "dashboard dashboard dashboard dashboard dashboard dashboard"
+            "dashboard dashboard dashboard dashboard dashboard dashboard"
+            "dashboard dashboard dashboard dashboard dashboard dashboard"
+            "dashboard dashboard dashboard dashboard dashboard dashboard"
+            "dashboard dashboard dashboard dashboard dashboard dashboard"
+            "dashboard dashboard dashboard dashboard dashboard dashboard"
+            "dashboard dashboard dashboard dashboard dashboard dashboard";
+    }
+
+}

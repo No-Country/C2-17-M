@@ -1,0 +1,72 @@
+$mainDarkBackgroundColour: #1b1e28;
+
+
+.loginContainer{
+    display: grid;
+    min-height: 100vh;
+    width: 100%;
+    background-color: $mainDarkBackgroundColour;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    & h1{
+        color: rgba(219, 78, 208, 1);
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+    &__form{
+        display: grid;
+        justify-content: center;
+        grid-gap: 1rem;
+        border-radius: 3rem;
+        padding: 1rem;
+        border: 60px solid transparent;
+        border-image: linear-gradient(to bottom, rgba(219, 78, 208, 1) 0%,rgba(190, 83, 238, 1) 100%)1; 
+        & input{
+            border-radius: 1vh;
+            border: none;
+            height: 2rem;
+        }
+        &--error{
+            display: grid;
+            justify-content: center;
+            color: red;
+            font-weight: 700;
+        }
+        &--success{
+            display: grid;
+            justify-content: center;
+            color: green;
+            font-weight: 700;
+        }
+        &--button{
+            display: grid;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+            border: none;
+            text-transform: uppercase;
+            background-color: rgba(190, 83, 238, 1);
+            height: 2rem;
+            border-radius: 1vh;
+            width: 50%;
+            cursor: pointer;
+            font-weight: 700;
+            opacity: 0.75;
+            margin: 1vh auto 1vh auto;
+            transition: 1s;
+            &:hover{
+                opacity: 1;
+                filter: saturate(1.5);
+            }
+            &#registerDisabled{
+            display: grid;
+            cursor: not-allowed;
+            opacity: 0.5;
+            filter: grayscale(2);
+        }
+        }
+        
+}
+}

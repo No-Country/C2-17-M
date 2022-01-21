@@ -1,8 +1,8 @@
-@import './resetcss.scss';
-@import './layout.scss';
-@import './dashboard.scss';
-@import './sidebar.scss';
-@import './topBar.scss';
-
-
-
+@import "./_resetcss.scss";
+@import "./_layout.scss";
+@import "./_dashboard.scss";
+@import "./_sidebar.scss";
+@import "./_topBar.scss";
+@import "./_statuscard.scss";
+@import "./custombutton";
+@import "./login";

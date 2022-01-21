@@ -1,0 +1,38 @@
+$mainDarkContainerColour: #28293d;
+$mainLightBackgroundColour: #f3f3f3;
+
+.sidebarContainer {
+    display: grid;
+    grid-area: sidebar;
+    grid-template-rows: 1fr 8fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: rgb(219, 78, 208);
+    background: linear-gradient(
+        180deg,
+        rgba(219, 78, 208, 1) 0%,
+        rgba(207, 82, 222, 1) 35%,
+        rgba(190, 83, 238, 1) 100%
+    );
+    &__top {
+        display: grid;
+        justify-content: center;
+        padding-bottom: 1rem;
+        font-size: 1.5rem;
+        border-bottom: 1px solid $mainLightBackgroundColour;
+    }
+    &__body {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 75%;
+        width: 100%;
+        grid-template: 1fr;
+        &--each {
+            display: flex;
+            font-size: 2rem;
+        }
+    }
+}
