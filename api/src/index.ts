@@ -7,6 +7,7 @@ import indexRoutes from './routes/indexRoutes';
 import usersRoutes from './routes/usersRoutes';
 import branchRoutes from './routes/branchRoutes';
 import ingresosRoutes from './routes/ingresosRoutes';
+import egresosRoutes from './routes/egresosRoutes';
 
 class Server {
     public app: Application;
@@ -30,6 +31,7 @@ class Server {
         this.app.use('/api/users', usersRoutes);
         this.app.use('/api/branches', branchRoutes);
         this.app.use('/api/ingresos', ingresosRoutes);
+        this.app.use('/api/egresos', egresosRoutes);
     }
 
     start(): void{
