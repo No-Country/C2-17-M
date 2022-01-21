@@ -11,6 +11,8 @@ const usersRoutes_1 = __importDefault(require("./routes/usersRoutes"));
 const branchRoutes_1 = __importDefault(require("./routes/branchRoutes"));
 const ingresosRoutes_1 = __importDefault(require("./routes/ingresosRoutes"));
 const egresosRoutes_1 = __importDefault(require("./routes/egresosRoutes"));
+const egresosRoutes_2 = __importDefault(require("./routes/egresosRoutes"));
+const egresosRoutes_3 = __importDefault(require("./routes/egresosRoutes"));
 class Server {
     constructor() {
         this.app = (0, express_1.default)();
@@ -30,6 +32,8 @@ class Server {
         this.app.use('/api/branches', branchRoutes_1.default);
         this.app.use('/api/ingresos', ingresosRoutes_1.default);
         this.app.use('/api/egresos', egresosRoutes_1.default);
+        this.app.use('/api/tipoegresos', egresosRoutes_2.default);
+        this.app.use('/api/tipoingresos', egresosRoutes_3.default);
     }
     start() {
         this.app.listen(this.app.get('port'), () => {
