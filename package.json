@@ -1,0 +1,8 @@
+{
+	"scripts": {
+		"apiInstall":"cd api & npm install",
+		"apiDeploy":"cd api & npm run dev",
+		"clientInstall":"cd client & npm install"
+		"clientDeploy":"cd client & npm install"
+	}
+}
