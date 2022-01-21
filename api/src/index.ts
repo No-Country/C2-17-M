@@ -8,8 +8,10 @@ import usersRoutes from './routes/usersRoutes';
 import branchRoutes from './routes/branchRoutes';
 import ingresosRoutes from './routes/ingresosRoutes';
 import egresosRoutes from './routes/egresosRoutes';
-import tipoEgresosRoutes from './routes/egresosRoutes';
-import tipoIngresosRoutes from './routes/egresosRoutes';
+import tipoEgresosRoutes from './routes/tipoEgresosRoutes';
+import tipoIngresosRoutes from './routes/tipoIngresosRoutes';
+import conceptoEgresosRoutes from './routes/conceptoEgresosRoutes';
+import conceptoIngresosRoutes from './routes/conceptoIngresosRoutes';
 
 class Server {
     public app: Application;
@@ -36,6 +38,8 @@ class Server {
         this.app.use('/api/egresos', egresosRoutes);
         this.app.use('/api/tipoegresos', tipoEgresosRoutes);
         this.app.use('/api/tipoingresos', tipoIngresosRoutes);
+        this.app.use('/api/conceptoegresos', conceptoEgresosRoutes);
+        this.app.use('/api/conceptoingresos', conceptoIngresosRoutes);
     }
 
     start(): void{
