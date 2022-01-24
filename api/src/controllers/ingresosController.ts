@@ -17,7 +17,7 @@ class IngresosController{
     public async ingresosxConcepto  (req: Request,res: Response):Promise<any>{
         const {id,fechaInicio,fechaFin}=req.body;
         console.log(id+' '+fechaInicio + ' '+ fechaFin);    
-        const ingresos = await pool.query('call  ingresosxConcepto(?)',[id,fechaInicio,fechaFin]);
+        const ingresos = await pool.query('call  ingresosxConcepto(?,?,?)',[id,fechaInicio,fechaFin]);
         return res.json(ingresos[0]);
     } 
 
