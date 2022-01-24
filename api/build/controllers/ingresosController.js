@@ -32,7 +32,8 @@ class IngresosController {
     ingresosxConcepto(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id, fechaInicio, fechaFin } = req.body;
-            const ingresos = yield database_1.default.query('call  ingresosxConcepto(?)', [id]);
+            console.log(id + ' ' + fechaInicio + ' ' + fechaFin);
+            const ingresos = yield database_1.default.query('call  ingresosxConcepto(?)', [id, fechaInicio, fechaFin]);
             return res.json(ingresos[0]);
         });
     }
