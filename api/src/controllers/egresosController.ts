@@ -16,7 +16,7 @@ class EgresosController{
 
     public async egresosxConcepto  (req: Request,res: Response):Promise<any>{
         const {id,fechaInicio,fechaFin}=req.body;    
-        const egresos = await pool.query('call  egresosxConcepto(?)',[id]);
+        const egresos = await pool.query('call  egresosxConcepto(?,?,?)',[id,fechaInicio,fechaFin]);
         return res.json(egresos[0]);
     } 
 

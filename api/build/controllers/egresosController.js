@@ -32,7 +32,7 @@ class EgresosController {
     egresosxConcepto(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id, fechaInicio, fechaFin } = req.body;
-            const egresos = yield database_1.default.query('call  egresosxConcepto(?)', [id]);
+            const egresos = yield database_1.default.query('call  egresosxConcepto(?,?,?)', [id, fechaInicio, fechaFin]);
             return res.json(egresos[0]);
         });
     }
