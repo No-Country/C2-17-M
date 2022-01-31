@@ -10,7 +10,8 @@ class UsersRoutes {
     config() {
         this.router.get('/', userController_1.userController.list);
         this.router.get('/:id', userController_1.userController.getOne);
-        this.router.post('/', userController_1.userController.create);
+        this.router.post('/signup', userController_1.userController.create);
+        this.router.post('/login', userController_1.userController.auth);
         this.router.delete('/:id', userController_1.userController.delete);
         this.router.put('/:id', userController_1.userController.update);
     }
